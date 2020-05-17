@@ -52,7 +52,6 @@ class MainPage extends React.Component{
 
   constructor(props) {
     super(props)
-    this.state = { isEmptyState: true }
     this.options = {
           sectionClassName: 'section',
           anchors: ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour'],
