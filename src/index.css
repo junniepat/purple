@@ -17,6 +17,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@800;900&display=swap');
 
+@import url('./assets/Fonts/barlow-bold-webfont.woff')
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
