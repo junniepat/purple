@@ -10,7 +10,7 @@ const Searchs = () => {
     setSearchItems(true)
 }
     return (
-        <div className="slideUp" style={{position: 'fixed', margin: '7px 0 0 15vw', zIndex:'100',background: ' rgba(255,255, 255, .9)',width:'100%',height:'97.5%' }}>
+        <div className="slideUp" style={{position: 'fixed', margin: '7px 0 0 15vw', zIndex:'100',background: ' rgba(255,255, 255, .9)',width:'82%',height:'97.5%' }}>
 
 {MenuItem && (
 <>
