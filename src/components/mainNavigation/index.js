@@ -2,20 +2,13 @@ import React from 'react'
 import sloganIcon from '../../assets/img/logos/logoM1.svg'
 import brandLogo from '../../assets/img/logos/nextgenerationblack.svg'
 import menuLogo from '../../assets/img/icons/menuicon.svg'
+import menuclose from '../../assets/img/icons/menuclose.svg';
 import audioLogo from '../../assets/img/icons/audio.svg'
 
 import './style.css'
 
 
 function MainNavigation (props) {
-const [menuVisible, setmenuVisible] = React.useState(false)
-
-// const purpleMenu = () => {
-//   setmenuVisible(true) 
-//   const seeMenu = React.useContext(menuVisible)
-// }
-
-
 
   return (
     <div className='main-navigation'>
@@ -29,7 +22,9 @@ const [menuVisible, setmenuVisible] = React.useState(false)
         <div className='nav-item'>
           <div><h6>MENU</h6></div>
           <div>
-                <img src={menuLogo} alt='' onClick={props.showMenu} />
+              
+                {!props.Menu ?   <img src={menuLogo} alt='' onClick={props.showMenu} /> :    <img src={menuclose} className="swing" alt='' onClick={props.showMenu} />}
+
           </div>
           <br clear='all' />
         </div>

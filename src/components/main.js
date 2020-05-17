@@ -7,46 +7,6 @@ import PageOne from './PageOne/PageOne'
 import PageFour from './pageFour'
 import Menu from './menu'
 
-// const MainPage = () => {
-//   const options = {
-//     sectionClassName: 'section',
-//     anchors: ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour'],
-//     scrollBar: false,
-//     navigation: true,
-//     verticalAlign: true,
-//     sectionPaddingTop: '0px',
-//     sectionPaddingBottom: '0px',
-//     arrowNavigation: true
-//   }
-
-  
-//   return (
-//     <div style={{ backgroundColor: '#000000' }}>
-//       <div className='main-pages-container'>
-//         <div className='mobile-line' />
-//         <Menu />
-//         <MainNavigation addTrip={this.triggerAddTripState} />
-//         <SectionsContainer {...options}>
- 
-//           <Section color='#333'>
-//             <PageOne />
-//           </Section>
-//           <Section color='#A7DBD8'>
-//             <PageTwo />
-//           </Section>
-//           <Section color='#E0E4CC'>
-//             <PageThree />
-//           </Section>
-//           <Section color='#E0E4CC'>
-//             <PageFour />
-//           </Section>
-
- 
-//         </SectionsContainer>
-//       </div>
-//     </div>
-//   )
-// }
 
 class MainPage extends React.Component{
 
@@ -62,14 +22,26 @@ class MainPage extends React.Component{
           sectionPaddingBottom: '0px',
           arrowNavigation: true
         }
+this.state = {
+isShowMenuState: false,
+setMenuBtn: false,
+menuImg: false 
+}
   }
 
   showMenu = () => {
-    this.setState({
-      ...this.state,
-      isShowMenuState: true
-    })
+		this.setState(function(prevState) {
+			return {isShowMenuState: !prevState.isShowMenuState};
+		});
+this.seeamenu();
   }
+
+seeamenu = () => {
+  this.setState({
+    menuImg: false  
+  })
+}
+
 
   render() {
      return <div style={{ backgroundColor: '#000000' }}>
@@ -77,7 +49,9 @@ class MainPage extends React.Component{
         <div className='mobile-line' />
 
         {this.state.isShowMenuState && <Menu />}
-        <MainNavigation showMenu={this.showMenu} />
+        <MainNavigation showMenu={this.showMenu} 
+        Menu={this.state.isShowMenuState} />
+
         <SectionsContainer {...this.options}>
  
           <Section color='#333'>
