@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "barlow-bold-webfont";
+  src: url("/src/assets/Fonts/barlow-bold-webfont.woff") format('woff');
+}
+@font-face {
+  font-family: "gothambook-webfont";
+  src: url("/src/assets/Fonts/gothambook-webfont.woff") format('woff');
+}
+@font-face {
+  font-family: "gothamlight-webfont";
+  src: url("/src/assets/Fonts/gothamlight-webfont.woff") format('woff');
+}
+@font-face {
+  font-family: "gothammedium-webfont";
+  src: url("/src/assets/Fonts/gothammedium-webfont.woff") format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@800;900&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,8 +25,149 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*{
+  margin: 0;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flatBtn {
+background: transparent !important;
+border: transparent !important;
+outline: none;
+}
+
+/* .card {
+  background: #fff;
+  height: 90vh;
+  width: 78vw;
+  z-index: 9999999999;
+  position: absolute;
+  margin: 0;
+  padding: 30px;
+} */
+
+.chapter-container h1 , .chapter-container h2,  .chapter-container h3 {
+font-family: 'Playfair Display', serif;
+}
+
+.chapter-container p {
+font-family: 'Montserrat', sans-serif;
+}
+
+.main-pages-container{
+  width: 85vw;
+}
+
+.chapter-container{
+  margin-left: 15vw;
+}
+.mobile-line{
+  display: none;
+  position: fixed;
+  width: 55px;
+  height: 100vh;
+  border-right: 1px solid #DA9031;
+  z-index: 2;
+}
+.chapter-container .title {
+  color: #DA9031;
+  padding-top: 23vh;
+  margin-left: 30px;
+}
+.chapter-content{
+  margin-top: 70px;
+  margin-left: 100px;
+  color: #ffffff;
+}
+.page-2-content{
+  padding-top: 30vh;
+  margin-left: 100px;
+}
+.page-2-title{
+  color: #ffffff;
+  font-size: 40px;
+}
+.page-2-content h3{
+  color: #ffffff;
+}
+.page-2-content h3 a{
+  color: inherit;
+  text-decoration: none;
+}
+.page-2-content h3 img{
+  padding-top: 5px;
+}
+.page-2-chapter-menu .page-2-menu-item{
+  color: #ffffff;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.page-2-chapter-menu .page-2-menu-item:hover{
+  color: #DA9031;
+}
+.page-2-chapter-menu .page-2-menu-item:hover img{
+  display: inline-block;
+}
+.page-2-chapter-menu .page-2-menu-item img {
+  display: none;
+  transition: all 0.5s;
+}
+.mobile-navigation {
+  display: none;
+  z-index: 100;
+  width: 100%;
+  padding-top: 7px;
+}
+.mobile-navigation-img{
+  width: 145px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mobile-navigation-brand-menu{
+  height: 45px;
+  width: 248px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mobile-mobile-icon{
+  float: left;
+}
+.mobile-mobile-icon img{
+  width: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.mobile-navigation-brand-menu-div{
+  background-color: #000000;
+  height: 45px;
+  margin-top: 15px;
+}
+@media (max-width: 1200px) {
+  .main-pages-container{
+    width: 100vw;
+  }
+  .chapter-container {
+    margin-left: 30px;
+  }
+  .mobile-line{
+    display: block;
+  }
+  .chapter-container .title {
+    padding-top: 0px;
+  }
+  .chapter-content{
+    margin-left: 40px;
+  }
+  .page-2-content{
+    padding-top: 30px;
+    margin-left: 37px;
+  }
+  .mobile-navigation{
+    display: block;
+  }
+  .page-2-title {
+    color: #ffffff;
+    font-size: 20px;
+  }
 }
