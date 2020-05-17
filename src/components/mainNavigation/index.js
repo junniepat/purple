@@ -7,13 +7,13 @@ import audioLogo from '../../assets/img/icons/audio.svg'
 import './style.css'
 
 
-function MainNavigation () {
+function MainNavigation (props) {
 const [menuVisible, setmenuVisible] = React.useState(false)
 
-const purpleMenu = () => {
-  setmenuVisible(true) 
-  const seeMenu = React.useContext(menuVisible)
-}
+// const purpleMenu = () => {
+//   setmenuVisible(true) 
+//   const seeMenu = React.useContext(menuVisible)
+// }
 
 
 
@@ -29,7 +29,7 @@ const purpleMenu = () => {
         <div className='nav-item'>
           <div><h6>MENU</h6></div>
           <div>
-                <img src={menuLogo} alt='' />
+                <img src={menuLogo} alt='' onClick={props.showMenu} />
           </div>
           <br clear='all' />
         </div>
