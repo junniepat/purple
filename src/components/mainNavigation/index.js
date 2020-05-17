@@ -6,10 +6,16 @@ import audioLogo from '../../assets/img/icons/audio.svg'
 
 import './style.css'
 
-const MainNavigation = () => {
+
+function MainNavigation () {
+const [menuVisible, setmenuVisible] = React.useState(false)
+
 const purpleMenu = () => {
-  
+  setmenuVisible(true) 
+  const seeMenu = React.useContext(menuVisible)
 }
+
+
 
   return (
     <div className='main-navigation'>
